@@ -145,6 +145,7 @@ def is_winner(complete_word, secret_word):
 def game_loop():
 
     while loop:
+
         print('__________________________________________________')
         player_letter = input('Choose a letter: ')
 
@@ -152,7 +153,12 @@ def game_loop():
         incorrect_letters = get_incorrect_letters( player_letter )
 
         print('Your word looks like this:\n{}'.format( hidden ))
-        print_stick_board( incorrect_letters )
+
+        try:
+            print_stick_board( incorrect_letters )
+        except IndexError:
+            print('You Lost!')
+            break
 
         get_point(player_letter)
         print('You\'ve entered (wrong): {}'.format( incorrect_letters ))
