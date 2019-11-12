@@ -139,8 +139,7 @@ def is_winner(complete_word, secret_word):
     if secret_word == complete_word:
         print('You Won!')
         loop = False
-    #else:
-        # after the board list is exhausted check if the the word matches, if it doesn't then you lost and exist out the loop
+
 
 def game_loop():
 
