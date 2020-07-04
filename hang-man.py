@@ -72,6 +72,8 @@ wrong_letters = []
 loop = True
 points = 0
 
+# Update code
+
 def hide_word():
     """Loops through the character list and replaces each letter with an * """
     copied_word = copy.copy(characters)
