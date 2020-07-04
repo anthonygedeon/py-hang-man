@@ -66,13 +66,11 @@ stick_man = [
     ''']
 
 
-word = 'hangman'
+word = input('Please enter your secret word: ')
 characters = list(word)
 wrong_letters = []
 loop = True
 points = 0
-
-# Update code
 
 def hide_word():
     """Loops through the character list and replaces each letter with an * """
@@ -101,7 +99,7 @@ def get_letter_matches(player_answer):
 def reveal_letters(dict, player_answer):
     """
         Takes the player input and if the letter matches the word then it will
-        unhide the letter in the guess_word list
+        unhidden the letter in the guess_word list
     """
     hidden_word = guess_word[1]
 
